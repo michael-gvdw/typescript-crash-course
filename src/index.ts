@@ -9,13 +9,15 @@
 let userInput: any;
 let userName: string;
 
-userInput = 5;
+userInput = 500;
 // userInput = 'mike';
 
 userName = userInput
+
+console.log("Hello World")
 
 function generateError(message: string, code: number): never {
     throw {message: message, errorCode: code}
 }
 
-generateError('An error occurred', 500)
+generateError('An error occurred', userInput)
