@@ -1,7 +1,16 @@
-function add(num1, num2) {
-    return num1 + num2;
+// let userInput: unknown;
+// let userName: string;
+//
+// userInput = 5;
+// userInput = 'mike';
+//
+// userName = userInput
+var userInput;
+var userName;
+userInput = 5;
+// userInput = 'mike';
+userName = userInput;
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
 }
-var num1 = 5;
-var num2 = 2.8;
-var result = add(num1, num2);
-console.log(result);
+console.log(generateError('An error occurred', 500));

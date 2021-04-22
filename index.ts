@@ -1,10 +1,21 @@
+// let userInput: unknown;
+// let userName: string;
+//
+// userInput = 5;
+// userInput = 'mike';
+//
+// userName = userInput
 
-function add(num1: number, num2: number) {
-    return num1 + num2
+let userInput: any;
+let userName: string;
+
+userInput = 5;
+// userInput = 'mike';
+
+userName = userInput
+
+function generateError(message: string, code: number): never {
+    throw {message: message, errorCode: code}
 }
 
-const n1 = '3'
-const n2 = 2.8
-
-const result = add(n1, n2)
-console.log(result)
+generateError('An error occurred', 500)
